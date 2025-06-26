@@ -19,7 +19,7 @@ app.post('/contact', async (req, res) => {
 
     await transporter.sendMail({
     from: `"${name}" <${email}>`,
-    to: process.env.EMAIL_USER, // Replace with your email
+    to: process.env.EMAIL_USER,
     subject: 'New Contact Form Message From Portfolio',
     text: message,
     html: `<p><strong>Name:</strong> ${name}</p>
