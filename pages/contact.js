@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Change this URL to your deployed backend endpoint in production
-        const backendUrl = 'https://your-backend-url.com/contact';
+        const backendUrl = 'https://carloray-portfolio.onrender.com/contact';
 
         try {
             const response = await fetch(backendUrl, {
