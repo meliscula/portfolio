@@ -110,7 +110,7 @@
 
         /* Navigation */
         nav {
-            background-color: var(--card-bg);
+            background: var(--card-bg);
             box-shadow: var(--shadow);
             position: sticky;
             top: 0;
@@ -139,8 +139,9 @@
         }
 
         nav ul li a:hover {
-            color: var(--primary-color);
-            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--dark-bg);
+            background-color: rgba(19, 252, 89, 0.897);
+            box-shadow: 0 0 20px 4px var(--accent-color), 0 10px 20px rgba(90, 248, 174, 0.3);
         }
 
         /* Section Styles */
@@ -180,6 +181,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            size: 50%;
         }
 
         .card:hover {
@@ -192,6 +194,35 @@
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.5rem;
+        }
+
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card-certificate {
+            background-color: blur(var(--card-bg), 10px);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition), transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .certificate-content img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-certificate:hover  {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 20px 4px var(--accent-color), 0 10px 20px rgba(90, 248, 174, 0.3);
         }
 
         .skills-container {
@@ -308,13 +339,14 @@
             box-shadow: var(--shadow);
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition), transform 0.3s ease, opacity 0.3s ease;
+            transition: var(--transition), transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
         }
 
         .testimonial:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 20px 4px var(--accent-color), 0 10px 20px rgba(90, 248, 174, 0.3);
         }
 
         .testimonial::before {
@@ -399,22 +431,15 @@
             padding: 10px 0;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
         }
 
         footer p {
             margin-bottom: 10px;
             color: var(--text-muted);
-        }
-
-        .footer-links a {
-            color: var(--text-color);
-            margin: 0 10px;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
         }
 
         /* Animations */
